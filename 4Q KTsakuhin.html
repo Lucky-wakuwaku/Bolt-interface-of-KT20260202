@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My Web Work</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 24px auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    .highlight {
+      color: #007acc;
+      font-weight: bold;
+    }
+    button {
+      padding: 8px 16px;
+      border-radius: 4px;
+      border: none;
+      background: #007acc;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005f99;
+    }
+    #message {
+      margin-top: 12px;
+      padding: 8px;
+      background: #e8f4ff;
+      border-radius: 4px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>作品タイトル：<span class="highlight">インタラクティブなサンプルページ</span></h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>作品の説明</h2>
+      <p>
+        このページは、HTML・CSS・JavaScript を組み合わせて作成した
+        シンプルなデモページです。ボタンを押すとメッセージが表示されるなど、
+        基本的なインタラクションを体験できるようにしています。
+      </p>
+    </section>
+
+    <section>
+      <h2>インタラクション</h2>
+      <p>下のボタンをクリックして、メッセージを表示してみてください。</p>
+      <button id="showMessageButton">メッセージを表示</button>
+      <div id="message">ボタンをクリックしてくれてありがとうございます！</div>
+    </section>
+  </main>
+
+  <script>
+    const button = document.getElementById('showMessageButton');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
